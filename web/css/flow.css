@@ -1,0 +1,26 @@
+#flowspeed {
+    left: 6%;
+    z-index: 100;
+    position: absolute;
+    bottom: 5%;
+}
+
+#flow, #speed {
+    /*text-shadow: 0 0 2px rgba(0, 0, 0, .5);*/
+    -webkit-transform: translateZ(0);
+    font-weight: 300;
+    color: rgba(0, 0, 0, .9);
+    font-size: 50px;
+    line-height: 135px;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    font-family: 'monospace', 'HelveticaNeueLTCom', 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, sans-serif;
+}
+
+#speed {
+    margin-left: 50px;
+
+}
+
+

@@ -1,0 +1,10 @@
+#container {
+    min-width: 800px;
+    height: 200px;
+    position: absolute;
+    opacity:0.8;
+    z-index: 0;
+    bottom: 0;
+    width: 98%;
+    margin-right: 6%;
+}

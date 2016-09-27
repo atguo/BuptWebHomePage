@@ -1,0 +1,35 @@
+/**
+ * Datetime
+ */
+
+#datetime {
+     position:absolute;
+    z-index: 100;
+     left: 6%;
+     bottom: 20%;
+     /*text-shadow: 0 0 2px rgba(0, 0, 0, .5);*/
+     -webkit-transform:translateZ(0);
+     cursor:default;
+     font-weight:300;
+     color:rgba(0,0,0,.9);
+     font-family: 'HelveticaNeueLTCom','HelveticaNeueLTCom-Th','Helvetica Neue',Helvetica,'Segoe UI',Consolas,Arial,sans-serif;
+ }
+
+#time {
+    font-size:120px;
+    line-height:135px;
+    cursor:pointer;
+    display:inline-block;
+    -webkit-user-select:none;
+}
+
+#date {
+    font-size:50px;
+    line-height:60px;
+}
+
+@font-face {
+    font-family: 'HelveticaNeueLTCom';
+    src: url('fonts/HelveticaNeueLTCom-Th.ttf') format('truetype');
+    /*src: url('fonts/HelveticaNeueLTCom-Th_0.woff') format('woff');*/
+}
