@@ -2,56 +2,60 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>BUPT network traffic monitor</title>
-    <script src="http://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
-    <script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
 
-    <script src="js/side_nav.js"></script>
-    <script src="js/datetime.js"></script>
-    <script src="js/flow.js"></script>
 
     <link rel="stylesheet" type="text/css" media="screen,projection" href="css/flow_chart.css"/>
     <link rel="stylesheet" type="text/css" media="screen,projection" href="css/datetime.css"/>
     <link rel="stylesheet" type="text/css" media="screen,projection" href="css/flow.css"/>
     <link rel="stylesheet" type="text/css" media="screen,projection" href="css/message.css"/>
     <link rel="stylesheet" type="text/css" media="screen,projection" href="css/side_nav.css"/>
-
+    <link rel="stylesheet" type="text/css" media="screen,projection" href="css/body.css"/>
     <!--<link rel="shortcut icon" type="image/png" href="icons/home/home16.png">-->
 
 </head>
 
-<body onload="setInterval(get_flow, 1000);setInterval(get_datetime, 1000); displayLineChart()">
+<body id="body" class="body"onload="setInterval(get_flow, 1000);setInterval(get_datetime, 1000); displayLineChart()">
 
-<div id="flowspeed">
-    <div id="flow">
+    <div id="flowspeed">
+        <div id="flow">
+        </div>
+
+        <div id="speed">
+        </div>
     </div>
 
-    <div id="speed">
+    <div id="chart_test">
     </div>
-</div>
-
-<div id="chart_test">
-</div>
 
 
-<div id="datetime">
-    <div id="time" title="Click to change format"></div>
-    <div id="date"></div>
-</div>
+    <div id="datetime">
+        <div id="time" title="Click to change format"></div>
+        <div id="date"></div>
+    </div>
 
 
 
-<div id="container">
-</div>
+    <div id="container">
+    </div>
 
 <!--<div id="message_font" >Font made from <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a> is licensed by CC BY-->
 <!--3.0-->
 <!--</div>-->
 
-<span id="open" onmouseover="openNav()">open</span>
+    <button id="open" onclick="openNav()" style="background-color: transparent; border: 0;">open</button>
 
-<div id="side_nav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-</div>
+    <div id="side_nav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <input type="file" id="file" style="display:none"  onchange="handleFiles(this.files)">
+        <a href="#" id="fileSelect">Select some files</a>
+    </div>
+    <script src="http://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
+    <script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+    <script src="js/readfile.js" type="text/javascript"></script>
+    <script src="js/side_nav.js"></script>
+    <script src="js/datetime.js"></script>
+    <script src="js/flow.js"></script>
 
 </body>
 
