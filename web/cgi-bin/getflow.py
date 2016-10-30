@@ -15,7 +15,7 @@ if flow:
     ret = {'status': 0, 'flow': int(flow.group(1)), "time": time.time()}
     print(json.dumps(ret))
 else:
-    f = open(r'D:\软件\BuptWebHomePage-master\BuptWebHomePage-master\web\cgi-bin\resource\form.json',  'r',  encoding='utf-8')
+    f = open(r'./resource/form.json',  'r',  encoding='utf-8')
     form = json.load(f)
     headers = {
         "Content-Type": "application/json",
