@@ -2,12 +2,13 @@ import requests
 import re
 import json
 import time
-
+import os
 
 print("Cache-control: no-cache")
 print("Content-Type: application/json")
 print()
 
+file_path = os.path.join(os.path.dirname(__file__) + '/resource/form.json')
 res = requests.get(r'http://10.3.8.211/')
 text = res.text
 flow = re.search(r"flow='(\d+)\s*'", text)
@@ -15,7 +16,7 @@ if flow:
     ret = {'status': 0, 'flow': int(flow.group(1)), "time": time.time()}
     print(json.dumps(ret))
 else:
-    f = open(r'./resource/form.json',  'r',  encoding='utf-8')
+    f = open(file_path,  'r',  encoding='utf-8')
     form = json.load(f)
     headers = {
         "Content-Type": "application/json",
